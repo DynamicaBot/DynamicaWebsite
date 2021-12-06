@@ -20,6 +20,14 @@ function HomepageHeader() {
             >
               Getting Started
             </Link>
+
+            <Link
+              className="button button--secondary button--lg"
+              to="https://discord.com/api/oauth2/authorize?client_id=916643283118198804&permissions=285212688&scope=bot%20applications.commands"
+              style={{ margin: "0 1em" }}
+            >
+              Invite
+            </Link>
           </div>
         </div>
       </div>
