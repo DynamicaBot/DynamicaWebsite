@@ -1,6 +1,10 @@
 kind: pipeline
 name: Build
 type: docker
+trigger:
+  branch:
+    excludes:
+      - gh-pages
 
 steps:
   - name: Restore Cache
