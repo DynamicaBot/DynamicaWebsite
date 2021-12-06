@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Lock
+# lock
 
 Use it to lock your channels away from pesky server members.
 
