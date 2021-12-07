@@ -53,7 +53,7 @@ When you want to update:
 
 1. If the bot is running simply stop it using `Control` + `c`
 2. Run `git pull` to get the latest changes.
-3. Repeat steps 2-3 of the installation.
+3. Repeat steps 2-4 of the installation.
 
 ## With Docker
 
