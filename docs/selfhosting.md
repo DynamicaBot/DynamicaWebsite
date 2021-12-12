@@ -6,6 +6,10 @@ sidebar_position: 4
 
 If you want to run this bot on your own computer you're probably looking at selfhosting.
 
+## Intents
+
+One thing to keep in mind is that this bot relies heavily on the presence intent in Discord's bot config. Without it the bot will not function correctly. Read more about intents [here](https://discord.com/developers/docs/topics/gateway#gateway-intents).
+
 ## Environment Variables
 
 In the following examples environment variables are defined.
@@ -16,7 +20,10 @@ If you're running Dynamica without docker they should be placed in a `.env` file
 CLIENT_ID=<client_id>
 TOKEN=<token>
 GUILD_ID=<guild_id>
+DATABASE_URL=<database_url>
 ```
+
+With the database url by default the location is `file:/app/config/db.sqlite`. If you want to change this make sure you have a volume corresponding to the file path. Otherwise your data won't be saved across restarts.
 
 :::warning
 
@@ -92,4 +99,70 @@ services:
       - CLIENT_ID=<client_id>
       - TOKEN=<token>
       - GUILD_ID=<guild_id> # optional
+```
+
+## Pterodactyl Egg
+
+Another option for self-hosting is a [Pterodactyl](https://pterodactyl.io/) Egg.
+
+For that you can use this file:
+
+```json title="egg-dynamica.json"
+{
+  "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+  "meta": {
+    "version": "PTDL_v1",
+    "update_url": null
+  },
+  "exported_at": "2021-12-12T16:55:59-05:00",
+  "name": "Dynamica",
+  "author": "sebastian.pietschner@gmail.com",
+  "description": "The dynamica discord bot",
+  "features": null,
+  "images": ["ghcr.io/sebasptsch/dynamica"],
+  "file_denylist": [],
+  "startup": "echo \"starting\"",
+  "config": {
+    "files": "{}",
+    "startup": "{\r\n\"done\": \"Ready! Logged in as \"\r\n}",
+    "logs": "{}",
+    "stop": "^C"
+  },
+  "scripts": {
+    "installation": {
+      "script": null,
+      "container": "alpine:3.4",
+      "entrypoint": "ash"
+    }
+  },
+  "variables": [
+    {
+      "name": "Database Path",
+      "description": "The path in which to create the sqlite database.",
+      "env_variable": "DATABASE_URL",
+      "default_value": "file:/home/container/dynamica/db.sqlite",
+      "user_viewable": true,
+      "user_editable": false,
+      "rules": "required|string"
+    },
+    {
+      "name": "Token",
+      "description": "The token for the discord bot.",
+      "env_variable": "TOKEN",
+      "default_value": "",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string"
+    },
+    {
+      "name": "Client ID",
+      "description": "The client ID of your discord bot.",
+      "env_variable": "CLIENT_ID",
+      "default_value": "",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string|size:18"
+    }
+  ]
+}
 ```
