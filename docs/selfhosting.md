@@ -166,3 +166,9 @@ For that you can use this file:
   ]
 }
 ```
+
+:::warning
+
+Make sure that the directory that you have your database stored in is persistent across restarts.
+
+:::
