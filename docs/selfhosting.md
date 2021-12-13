@@ -43,7 +43,7 @@ You must have the following items installed:
 
 :::
 
-1. Clone the repository [here](https://github.com/sebasptsch/Dynamica).
+1. Clone the repository [here](https://github.com/dynamicabot/Dynamica).
 2. Run `yarn install` to install the dependancies.
 3. Run `yarn prisma migrate deploy` to create the database.
 4. Run `yarn start` to start the bot.
@@ -80,7 +80,7 @@ docker run -d \
   -e GUILD_ID=<guild_id> `#optional` \
   -v </path/to/config>:/app/config \
   --restart unless-stopped \
-  ghcr.io/sebasptsch/dynamica
+  ghcr.io/dynamicabot/dynamica
 ```
 
 ### Compose
@@ -90,7 +90,7 @@ docker run -d \
 version: "2.1"
 services:
   discordbot:
-    image: ghcr.io/sebasptsch/dynamica
+    image: ghcr.io/dynamicabot/dynamica
     container_name: dynamica
     restart: unless-stopped
     volumes:
@@ -119,7 +119,7 @@ For that you can use this file:
   "author": "sebastian.pietschner@gmail.com",
   "description": "The dynamica discord bot",
   "features": null,
-  "images": ["ghcr.io/sebasptsch/dynamica"],
+  "images": ["ghcr.io/dynamicabot/dynamica"],
   "file_denylist": [],
   "startup": "echo \"starting\"",
   "config": {
