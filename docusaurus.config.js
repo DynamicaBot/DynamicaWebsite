@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "sebasptsch", // Usually your GitHub org/user name.
+  organizationName: "dynamicabot", // Usually your GitHub org/user name.
   projectName: "dynamica", // Usually your repo name.
 
   presets: [
@@ -24,7 +24,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/sebasptsch/DynamicaWebsite/edit/master/",
+          editUrl:
+            "https://github.com/dynamicabot/DynamicaWebsite/edit/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -51,7 +52,7 @@ const config = {
           // },
           { to: "/docs/intro", label: "Docs", position: "left" },
           {
-            href: "https://github.com/sebasptsch/Dynamica",
+            href: "https://github.com/dynamicabot/Dynamica",
             label: "GitHub",
             position: "right",
           },
@@ -74,7 +75,7 @@ const config = {
             items: [
               {
                 label: "Github",
-                href: "https://github.com/sebasptsch/Dynamica",
+                href: "https://github.com/dynamicabot/Dynamica",
               },
               {
                 label: "Discord",

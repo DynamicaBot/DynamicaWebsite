@@ -6,6 +6,10 @@ sidebar_position: 4
 
 If you want to run this bot on your own computer you're probably looking at selfhosting.
 
+## Intents
+
+One thing to keep in mind is that this bot relies heavily on the presence intent in Discord's bot config. Without it the bot will not function correctly. Read more about intents [here](https://discord.com/developers/docs/topics/gateway#gateway-intents).
+
 ## Environment Variables
 
 In the following examples environment variables are defined.
@@ -16,7 +20,10 @@ If you're running Dynamica without docker they should be placed in a `.env` file
 CLIENT_ID=<client_id>
 TOKEN=<token>
 GUILD_ID=<guild_id>
+DATABASE_URL=<database_url>
 ```
+
+With the database url by default the location is `file:/app/config/db.sqlite`. If you want to change this make sure you have a volume corresponding to the file path. Otherwise your data won't be saved across restarts.
 
 :::warning
 
@@ -36,7 +43,7 @@ You must have the following items installed:
 
 :::
 
-1. Clone the repository [here](https://github.com/sebasptsch/Dynamica).
+1. Clone the repository [here](https://github.com/dynamicabot/Dynamica).
 2. Run `yarn install` to install the dependancies.
 3. Run `yarn prisma migrate deploy` to create the database.
 4. Run `yarn start` to start the bot.
@@ -73,7 +80,7 @@ docker run -d \
   -e GUILD_ID=<guild_id> `#optional` \
   -v </path/to/config>:/app/config \
   --restart unless-stopped \
-  ghcr.io/sebasptsch/dynamica
+  ghcr.io/dynamicabot/dynamica
 ```
 
 ### Compose
@@ -83,7 +90,7 @@ docker run -d \
 version: "2.1"
 services:
   discordbot:
-    image: ghcr.io/sebasptsch/dynamica
+    image: ghcr.io/dynamicabot/dynamica
     container_name: dynamica
     restart: unless-stopped
     volumes:
@@ -93,3 +100,15 @@ services:
       - TOKEN=<token>
       - GUILD_ID=<guild_id> # optional
 ```
+
+## Pterodactyl Egg
+
+Another option for self-hosting is a [Pterodactyl](https://pterodactyl.io/) Egg.
+
+For that you can use this [file](https://github.com/DynamicaBot/Dynamica/blob/master/egg-dynamica.json).
+
+:::warning
+
+Make sure that the directory that you have your database stored in is persistent across restarts.
+
+:::
