@@ -8,6 +8,6 @@ If join requests are enabled then you can request to join locked secondary chann
 
 :::info Options
 
-- **channel** If you want to see the options and their description of a subcommand you can specify the subcommand's name.
+- **channel** The channel that you wish to join.
 
 :::

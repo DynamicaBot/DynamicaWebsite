@@ -8,6 +8,6 @@ Shows a list of commands and their asociated descriptions according to discord. 
 
 :::info Options
 
-- **subcommand** If you want to see the options and their description of a subcommand you can specify the subcommand's name.
+- **subcommand** Autocompletes the name of one of the commands.
 
 :::
