@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Dynamica",
   tagline:
-    "A bot for reducing the amount of empty voice channels in any server in a fun way with a metric tonne of customization options.",
+    "A bot for reducing the amount of empty voice channels in any server",
   url: "https://dynamica.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
