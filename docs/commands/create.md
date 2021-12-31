@@ -13,8 +13,3 @@ It creates a new `Primary` channel which your users are able to join in order to
 - **section** Creates the channel in a section of a discord server.
 
 :::
-
-:::warning
-All of the settings you change are linked to the primary channel. So, if you were to delete it, it would also delete all of the aliases you had made along with the templates that you had set.
-
-:::

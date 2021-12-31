@@ -1,13 +1,14 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # template
 
-Using the `/template` command you can set the template for the channel name of the channel you're in. The default template is `@@game@@ ##` which will format the name of the channel accoding to the [formatting rules](/docs/formatting).
+Using the `/template` command you can set the template for the channel name target primary channel. The default template is `@@game@@ ##` which will format the name of the channel according to the [formatting rules](/docs/formatting).
 
 :::info Options
 
+- **channel** The channel to change the template for.
 - **template** The template to use.
 
 :::

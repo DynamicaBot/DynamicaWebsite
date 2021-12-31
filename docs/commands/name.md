@@ -1,13 +1,13 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 ---
 
 # name
 
 Changes the name of the [`Secondary`](/docs/commands/intro#technical-terms) channel you're currently in.
 
-:::warning
+:::info Options
 
-This is a change that will get deleted with the channel after everyone has left.
+- **channel** The channel to change the name of.
 
 :::

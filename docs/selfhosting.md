@@ -45,8 +45,10 @@ You must have the following items installed:
 
 1. Clone the repository [here](https://github.com/dynamicabot/Dynamica).
 2. Run `yarn install` to install the dependancies.
-3. Run `yarn prisma migrate deploy` to create the database.
-4. Run `yarn start` to start the bot.
+3. Run `yarn build` to build to JavaScript.
+4. Run `yarn prisma migrate deploy` to create the database.
+5. Run `yarn deploy` to deploy the commands to the server or guild.
+6. Run `yarn start` to start the bot.
 
 :::warning
 

@@ -1,9 +1,10 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 ---
+
 # bitrate
 
-The `bitrate` command may only be run by the owner of a channel, an admin or a user with the "Dynamica Manager" role. 
+The `bitrate` command may only be run by the owner of a channel, an admin or a user with the "Dynamica Manager" role.
 
 :::info Options
 

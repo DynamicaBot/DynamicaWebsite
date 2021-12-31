@@ -1,27 +1,9 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 ---
 
 # lock
 
-Use it to lock your channels away from pesky server members.
+Use it to lock your channels away from pesky server members. Locks it to the creator (initially) and permissions can be altered with [`/permission`](/docs/commands/permission).
 
-## Add
-
-`/lock add <role>` adds permission for a role to access a locked channel which, if not already locked will lock.
-
-:::info Options
-
-- **role** The role to add permissions for.
-
-:::
-
-## Remove
-
-`/lock remove <role>` removes access (provided that you've given it and the channel is locked already).
-
-:::info Options
-
-- **role** The role to take permissions from. If not provided then lock is removed.
-
-:::
+Channels can be reset to default with [`/unlock`](/docs/commands/unlock).

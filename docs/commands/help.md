@@ -1,10 +1,10 @@
 ---
-sidebar_position: 11
+sidebar_position: 2
 ---
 
 # help
 
-Shows a list of commands and their asociated descriptions according to discord.
+Shows a list of commands and their asociated descriptions according to discord. If you want help with a subcommand they're autocompleted once you start typing.
 
 :::info Options
 

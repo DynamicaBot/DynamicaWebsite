@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # general
@@ -8,7 +8,8 @@ Using the `/general` command you can set the template for the channel name of th
 
 :::info Options
 
-- **template** The template to use.
+- **channel** The channel to change the template for.
+- **name** The template to use.
 
 :::
 
