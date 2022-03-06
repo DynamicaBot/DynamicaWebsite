@@ -1,5 +1,6 @@
 {
   "files.exclude": {
     "**/.docusaurus": true
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

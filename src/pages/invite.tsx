@@ -6,7 +6,7 @@ export default function Invite(): JSX.Element {
   useEffect(() => {
     if (window) {
       window.location.replace(
-        "https://discord.com/api/oauth2/authorize?client_id=916643283118198804&permissions=285212688&scope=bot%20applications.commands"
+        "https://discord.com/api/oauth2/authorize?client_id=916643283118198804&permissions=8&scope=bot%20applications.commands"
       );
     }
   }, []);
