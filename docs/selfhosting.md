@@ -16,11 +16,14 @@ In the following examples environment variables are defined.
 
 If you're running Dynamica without docker they should be placed in a `.env` file in the Dynamica folder using the following structure:
 
-```env
+```bash
 CLIENT_ID=<client_id>
 TOKEN=<token>
-GUILD_ID=<guild_id>
+GUILD_ID=<guild_id> # Optional
 DATABASE_URL=<database_url>
+MQTT_URL=<mqtt_url> # Optional
+MQTT_USER=<mqtt_user> # Optional
+MQTT_PASS=<mqtt_pass> # Optional
 ```
 
 With the database url by default the location is `file:/app/config/db.sqlite`. If you want to change this make sure you have a volume corresponding to the file path. Otherwise your data won't be saved across restarts.
@@ -79,7 +82,10 @@ docker run -d \
   --name=dynamica \
   -e CLIENT_ID=<client_id> \
   -e TOKEN=<token> \
-  -e GUILD_ID=<guild_id> `#optional` \
+  -e GUILD_ID=<guild_id> \ #optional
+  -e MQTT_URL=<mqtt_url> \ #optional
+  -e MQTT_USER=<mqtt_user> \ #optional
+  -e MQTT_PASS=<mqtt_pass> \ #optional
   -v </path/to/config>:/app/config \
   --restart unless-stopped \
   ghcr.io/dynamicabot/dynamica
@@ -101,6 +107,9 @@ services:
       - CLIENT_ID=<client_id>
       - TOKEN=<token>
       - GUILD_ID=<guild_id> # optional
+      - MQTT_URL=<mqtt_url> # optional
+      - MQTT_USER=<mqtt_user> # optional
+      - MQTT_PASS=<mqtt_pass> # optional
 ```
 
 ## Pterodactyl Egg

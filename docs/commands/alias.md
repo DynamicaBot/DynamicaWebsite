@@ -10,16 +10,21 @@ The alias command allows you to shorten the name of a game in the channel's titl
 
 The `/alias add` command adds a new alias. So if you were playing "F1 2021" `/alias add "F1 2021" "F1"` every time the channel name updates instead of `F1 2021` `F1` would appear.
 
-:::warning
+:::info Options
 
-If an alias already exists for an activty it will always get replaced if you add a new alias with the same activity.
+- **activity** The name of the activity that you want to add an alias for. (Autosuggested based on the games currently being playing in the channel you're in)
+- **alias** What alias you want to replace it with.
 
 :::
 
+## update
+
+The `/alias update` updates an existing alias by it's asociated activity.
+
 :::info Options
 
-- **activity** The exact name of the activity that you want to add an alias for.
-- **alias** What you want to replace it with.
+- **activity** The name of the activity that you want to update the alias for (autosuggested based on existing aliases)
+- **alias** The new alias that you want to give it.
 
 :::
 
@@ -30,9 +35,3 @@ This does exactly as you would expect, it removes an alias for a given activity.
 :::info Options
 
 - **activity** The exact name of the activity that you want to delete the alias of.
-
-:::
-
-## list
-
-Lists the aliases that you've created for the channel you are in.

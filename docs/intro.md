@@ -6,13 +6,9 @@ sidebar_position: 1
 
 ## Invite
 
-Invite Dynamica to your server with this [invite link](https://discord.com/api/oauth2/authorize?client_id=916643283118198804&permissions=285212688&scope=bot%20applications.commands).
+Invite Dynamica to your server with this [invite link](https://discord.com/api/oauth2/authorize?client_id=916643283118198804&permissions=8&scope=bot%20applications.commands).
 
 The bot requires a few different permissions (mainly to shuffle and create channels) but also to register slash commands!
-
-## Dynamica Manager Role
-
-As soon as Dynamica has joined your server it will create a roll called `Dynamica Manager`. This role is needed for anyone to make changes to the bot's settings like aliases or the channel name template. You can give anyone on the server the role and it doesn't give them extra permissions, it just allows them to use Dynamica's slash commands.
 
 ## Create a channel
 

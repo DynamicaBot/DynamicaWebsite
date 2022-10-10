@@ -47,3 +47,7 @@ The string `+#` will be replaced with the roman numeral representation of the ch
 ### No formatting
 
 The string `$#` will result in just the channel number without anything else.
+
+### Emoji formatting
+
+The string `@@emoji@@` will be replaced by a random emoji. Generated when the channel is first created.
