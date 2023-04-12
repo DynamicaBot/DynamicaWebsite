@@ -29,4 +29,4 @@ We take appropriate measures to protect the information we collect from our Disc
 We reserve the right to modify this Privacy Policy at any time. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and protect your information.
 
 **Contact Us:**
-If you have any questions or concerns about our Privacy Policy, please contact us at [insert contact information].
+If you have any questions or concerns about our Privacy Policy, please contact us on our support server.
